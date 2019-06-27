@@ -12,8 +12,7 @@ export class EditorDemo extends Component {
         super();
         this.state = {
             text1 : '<span class="ql-formats"><button class="ql-formula" aria-label="Formula" type="button">Edit<button></span>',
-            text2 : '<span class="ql-formula" data-value="x+y">﻿<span contenteditable="false"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><annotation encoding="application/x-tex">x+y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.66666em; vertical-align: -0.08333em;"></span><span class="mord mathdefault">x</span><span class="mspace" style="margin-right: 0.222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right: 0.222222em;"></span></span><span class="base"><span class="strut" style="height: 0.625em; vertical-align: -0.19444em;"></span><span style="margin-right: 0.03588em;" class="mord mathdefault">y</span></span></span></span></span>﻿</span></p>'
-
+            text2 : '<b onclick={console.log("cliquei")}><span class="ql-formula" data-value="c = \\pm\\sqrt{a^2 + b^3}"/></b>'
         };
     }
 
@@ -33,6 +32,7 @@ export class EditorDemo extends Component {
         const header = this.renderHeader();
         console.log(this.state.text2)
 
+        
         const value = this.state.text2;
 
         return (
